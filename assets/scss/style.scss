@@ -17,11 +17,15 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
+
+    color: white;
+    background-color: #ef8f9980;
+
     border:0px solid white;
     border-radius: 20px;
-    height: 60vh;
     box-shadow: inset 10px 2px 10px rgb(255 128 246 / 25%), inset -10px -5px 10px rgb(245 247 193 / 71%);
+    
+    height: 70vh;
     &__item{
         margin: 4px;
     }
@@ -30,5 +34,10 @@ body{
     }
     ul{
         list-style-type: none;
+        padding: 0px 40px 0px 80px
+    }
+    .name{
+        font-weight: bold;
+        color: black;
     }
 }
