@@ -40,4 +40,11 @@ body {
   color: black;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    box-shadow: unset;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
