@@ -14,16 +14,38 @@
     <title>irvaniali79</title>
 </head>
 <body>
-
-    <div class="container">
-        <div class="header">
-            <figure>
+    <div class="sidebar">
+        <!-- TODO: MUST BE DYNAMIC -->
+        <ul class="menu sidebar__menu">
+            <li class="item menu__item" onclick="getRelatedItems('Books',0)">Books</li>
+            <li class="item menu__item" onclick="getRelatedItems('Tweets',1)">Tweets</li>
+            <li class="item menu__item" onclick="getRelatedItems('Diaries',2)">Diaries</li>
+        </ul>
+        <div class="links">
+            <figure class="item links__item">
+                <img src="" alt="">
+            </figure>
+            <figure class="item links__item>
+                <img src="" alt="">
+            </figure>
+            <figure class="item links__item>
+                <img src="" alt="">
+            </figure>
+            <figure class="item links__item>
                 <img src="" alt="">
             </figure>
         </div>
-        <figure class="profileimg">
-            <img src="" alt="">
-        </figure>
+    </div>
+    <div class="container">
+        <div class="header">
+            <figure class="header__wallpaper">
+                <img src="./assets/images/BACKGROUND.jpg" alt="Home">
+            </figure>
+            <figure class="header__profileimg">
+                <img src="./assets/images/me.jpg" alt="profile">
+            </figure>
+        </div>
+        
         <div class="description">
             <div>
                 <h3>description</h3>
@@ -52,28 +74,7 @@
        
     </div>
 
-    <div class="sidebar">
-        <!-- TODO: MUST BE DYNAMIC -->
-        <ul class="menu sidebar__menu">
-            <li class="item menu__item" onclick="getRelatedItems('Books',0)">Books</li>
-            <li class="item menu__item" onclick="getRelatedItems('Tweets',1)">Tweets</li>
-            <li class="item menu__item" onclick="getRelatedItems('Diaries',2)">Diaries</li>
-        </ul>
-        <div class="links">
-            <figure class="item links__item">
-                <img src="" alt="">
-            </figure>
-            <figure class="item links__item>
-                <img src="" alt="">
-            </figure>
-            <figure class="item links__item>
-                <img src="" alt="">
-            </figure>
-            <figure class="item links__item>
-                <img src="" alt="">
-            </figure>
-        </div>
-    </div>
+  
 
 </body>
 
