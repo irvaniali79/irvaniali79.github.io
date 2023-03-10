@@ -6,7 +6,6 @@ body {
   box-sizing: border-box;
   height: 100vh;
   margin: 0;
-  background-image: linear-gradient(150deg, rgba(245, 0, 136, 0.78), rgb(235, 243, 91));
   display: flex;
   flex-direction: column;
   justify-content: center;
