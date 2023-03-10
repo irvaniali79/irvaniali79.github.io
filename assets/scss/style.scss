@@ -8,16 +8,23 @@ body{
     background-image: linear-gradient(150deg,rgb(245 0 136 / 78%),rgb(235, 243, 91));
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
 }
-
+.profile{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 20%;
+}
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    margin: 20px;
+    width: 90%;
     color: white;
     background-color: #ef8f9980;
 
@@ -40,6 +47,9 @@ body{
         font-weight: bold;
         color: black;
     }
+}
+.description{
+    margin: 4px;
 }
 
 
