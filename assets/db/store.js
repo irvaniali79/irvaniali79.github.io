@@ -1,6 +1,6 @@
 
 let menu= {
-    books:[
+    Books:[
         {title:'Clean Architecture'},
         {title:'Clean '}
 
@@ -8,7 +8,7 @@ let menu= {
 };
 let posts= [
     {
-
+        content:'salam'
     }
 ];
-export {menu,posts};
+export default {menu,posts};

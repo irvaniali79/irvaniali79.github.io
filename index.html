@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type="module" >
         import {getRelatedItems} from "./assets/scripts/menu.js";
+        import {mountPostList} from "./assets/scripts/post.js";
+
         window.getRelatedItems = getRelatedItems;
+        window.mountPostList = mountPostList;
+
     </script>
     <script type="module" src="./assets/db/store.js"></script>
     <title>irvaniali79</title>
 </head>
 <body>
     <div class="sidebar">
-        <!-- TODO: MUST BE DYNAMIC -->
+        <!-- TODO: MUST BE DYNAMIC 
+
+            indeed we need a function to mount this block into document 'mountMenu'
+            
+        -->
         <ul class="menu sidebar__menu">
             <li class="item menu__item" onclick="getRelatedItems('Books',0)">Books</li>
             <li class="item menu__item" onclick="getRelatedItems('Tweets',1)">Tweets</li>
@@ -47,28 +55,27 @@
         </div>
         
         <div class="description">
-            <div>
+            <div class="description__item">
                 <h3>description</h3>
-                <p></p>
+                <p>Anim nisi enim qui aliquip consectetur nulla est exercitation ipsum labore consequat fugiat cillum. Veniam ullamco cillum ad velit culpa aliquip labore amet aliqua veniam consequat sit pariatur sint. Enim exercitation minim tempor esse nulla adipisicing nostrud ad aliqua.</p>
             </div>
 
             
         </div>
         <div class="controllbtn">
-            <button>
-                contact with me
+            <button class="controllbtn__btn">
+                Contact with me
+            </button class="controllbtn__btn">
+            <button class="controllbtn__btn">
+                Rss feeder
             </button>
-            <button>
-            </button>
-            <button>
+            <button class="controllbtn__btn">
+                Donate
             </button>
         </div>
         <!-- TODO: MUST BE DYNAMIC -->
-        <div class="announcements">
+        <div class="announcements" onload="mountPostList('posts','posts')">
             <ul class="posts">
-                <li class="post">
-    
-                </li>
             </ul>
         </div>  
        

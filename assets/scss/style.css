@@ -33,14 +33,16 @@ body {
   width: 100%;
 }
 .header__wallpaper {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 .header__profileimg {
   bottom: -25%;
   left: 10%;
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 125px;
   height: 125px;
 }
@@ -80,7 +82,7 @@ body {
 }
 
 .description {
-  margin: 50px 50px 25px 50px;
+  margin: 4px;
 }
 
 .sidebar {
@@ -92,6 +94,4 @@ body {
     box-shadow: unset;
     background-color: rgba(0, 0, 0, 0);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

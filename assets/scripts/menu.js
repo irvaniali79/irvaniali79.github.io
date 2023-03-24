@@ -1,5 +1,9 @@
-import {data} from "../db/store.js";
+import data from "../db/store.js";
 
+
+function getRelatedItems(itemName,itemOffset){
+    pushItemsToElement('menu__item',data.menu[itemName],itemOffset)
+}
 
 function pushItemsToElement(listElementId,elementArray,position){
     if( position != undefined )
@@ -10,8 +14,13 @@ function pushItemsToElement(listElementId,elementArray,position){
     }
    
 }
-function getRelatedItems(itemName,itemOffset){
-    pushItemsToElement('menu__item',data[itemName],itemOffset)
-}
 
-export {getRelatedItems };
+function mountMenu(){
+    const elem = document.getElementsByClassName(className);
+    for (const item in data[listItems]) {
+        if ( item.body )elem.innerHtml = item.body;
+        else elem.innerHtml = '<li class="post">'+item.content+'<li>';
+    }
+    
+}
+export {mountMenu,getRelatedItems };
