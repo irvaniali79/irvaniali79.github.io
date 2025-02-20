@@ -7,11 +7,14 @@
     <meta name="google-site-verification" content="HFiGT836AlAxtDJMD-Ey9et8Zf_JbDmV4y3GCGeoCao" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type="module" >
-        import {getRelatedItems} from "./assets/scripts/menu.js";
+        import {getRelatedItems, mountMenu} from "./assets/scripts/menu.js";
         import {mountPostList} from "./assets/scripts/post.js";
 
-        window.getRelatedItems = getRelatedItems;
-        window.mountPostList = mountPostList;
+
+        window.onload = function() {
+            mountMenu('menu');
+            mountPostList('posts', 'posts');
+        };
 
     </script>
     <script type="module" src="./assets/db/store.js"></script>
@@ -24,11 +27,7 @@
             indeed we need a function to mount this block into document 'mountMenu'
             
         -->
-        <ul class="menu sidebar__menu">
-            <li class="item menu__item" onclick="getRelatedItems('Books',0)">Books</li>
-            <li class="item menu__item" onclick="getRelatedItems('Tweets',1)">Tweets</li>
-            <li class="item menu__item" onclick="getRelatedItems('Diaries',2)">Diaries</li>
-        </ul>
+        <ul class="menu sidebar__menu"></ul>
         <div class="links">
             <figure class="item links__item">
                 <img src="" alt="">
@@ -74,7 +73,7 @@
             </button>
         </div>
         <!-- TODO: MUST BE DYNAMIC -->
-        <div class="announcements" onload="mountPostList('posts','posts')">
+        <div class="announcements">
             <ul class="posts">
             </ul>
         </div>  

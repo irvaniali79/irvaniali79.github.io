@@ -4,7 +4,10 @@ let menu= {
         {title:'Clean Architecture'},
         {title:'Clean '}
 
-    ]
+    ],
+    tweets:[],
+    diaries:[]
+
 };
 let posts= [
     {

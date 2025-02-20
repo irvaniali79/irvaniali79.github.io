@@ -2,11 +2,12 @@ import data from "../db/store.js";
 
 
 function mountPostList(className,listItems){
-    const elem = document.getElementsByClassName(className);
-    for (const item in data[listItems]) {
-        if ( item.body )elem.innerHtml = item.body;
-        else elem.innerHtml = '<li class="post">'+item.content+'<li>';
+    const elem = document.getElementsByClassName(className)[0];
+    let postsHtml = '';
+    for (const item of data['posts']) {
+        postsHtml += '<li class="post">'+item.content+'</li>\n';
     }
+    elem.innerHTML = postsHtml;
 }
 
 

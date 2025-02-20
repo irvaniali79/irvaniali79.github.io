@@ -8,19 +8,25 @@ function getRelatedItems(itemName,itemOffset){
 function pushItemsToElement(listElementId,elementArray,position){
     if( position != undefined )
         position = elementArray.length;
-    for (element in elementArray){
+    for (const element in elementArray){
         document.getElementsByClassName(listElementId).
         splice(position,0,element);
     }
    
 }
 
-function mountMenu(){
-    const elem = document.getElementsByClassName(className);
-    for (const item in data[listItems]) {
-        if ( item.body )elem.innerHtml = item.body;
-        else elem.innerHtml = '<li class="post">'+item.content+'<li>';
+function mountMenu(className){
+    const elem = document.getElementsByClassName(className)[0];
+    let cnt = 0;
+    let itemsHtml = '';
+    for (const item in data['menu']) {
+        itemsHtml += 
+            `<li class="item menu__item" onClick="getRelatedItems(${item},${cnt})">`
+            +item+
+            '</li>\n';
+        cnt++;
     }
-    
+    elem.innerHTML = itemsHtml;
 }
+
 export {mountMenu,getRelatedItems };
