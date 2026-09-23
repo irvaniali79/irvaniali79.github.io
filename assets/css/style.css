@@ -299,6 +299,9 @@ img, svg, video { max-width: 100%; }
 .project-card,
 .post { min-width: 0; }
 
+.hero {
+  padding-inline: clamp(1.75rem, 4.5vw, 4.5rem);
+}
 .hero__content {
   width: min(760px, calc(100% - clamp(305px, 30vw, 355px)));
   padding-bottom: clamp(4rem, 7vw, 5.25rem);
