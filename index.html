@@ -4,84 +4,204 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="HFiGT836AlAxtDJMD-Ey9et8Zf_JbDmV4y3GCGeoCao" />
+    <meta name="description" content="Ali Irvani — AI Engineer, Backend & Data Developer. RAG, LLM integration, distributed systems, PostgreSQL, Redis, Python, Node.js and algorithmic trading.">
+    <meta name="theme-color" content="#0a0f1e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script type="module" >
-        import {getRelatedItems, mountMenu} from "./assets/scripts/menu.js";
-        import {mountPostList} from "./assets/scripts/post.js";
-
-
-        window.onload = function() {
-            mountMenu('menu');
-            mountPostList('posts', 'posts');
-        };
-
-    </script>
-    <script type="module" src="./assets/db/store.js"></script>
-    <title>irvaniali79</title>
+    <title>Ali Irvani · AI Engineer</title>
 </head>
 <body>
-    <div class="sidebar">
-        <!-- TODO: MUST BE DYNAMIC 
+    <a class="skip-link" href="#main">Skip to content</a>
 
-            indeed we need a function to mount this block into document 'mountMenu'
-            
-        -->
-        <ul class="menu sidebar__menu"></ul>
-        <div class="links">
-            <figure class="item links__item">
-                <img src="" alt="">
-            </figure>
-            <figure class="item links__item>
-                <img src="" alt="">
-            </figure>
-            <figure class="item links__item>
-                <img src="" alt="">
-            </figure>
-            <figure class="item links__item>
-                <img src="" alt="">
-            </figure>
-        </div>
-    </div>
-    <div class="container">
-        <div class="header">
-            <figure class="header__wallpaper">
-                <img src="./assets/images/BACKGROUND.jpg" alt="Home">
-            </figure>
-            <figure class="header__profileimg">
-                <img src="./assets/images/me.jpg" alt="profile">
-            </figure>
-        </div>
-        
-        <div class="description">
-            <div class="description__item">
-                <h3>description</h3>
-                <p>Anim nisi enim qui aliquip consectetur nulla est exercitation ipsum labore consequat fugiat cillum. Veniam ullamco cillum ad velit culpa aliquip labore amet aliqua veniam consequat sit pariatur sint. Enim exercitation minim tempor esse nulla adipisicing nostrud ad aliqua.</p>
+    <div class="site-shell" id="top">
+        <aside class="sidebar" aria-label="Portfolio navigation">
+            <div class="sidebar__top">
+                <a class="brand" href="#top" aria-label="Ali Irvani home">
+                    <span class="brand__mark" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span>
+                        <strong>AI</strong>
+                        <small>irvaniali79</small>
+                    </span>
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
+                    <span></span><span></span><span></span>
+                </button>
             </div>
 
-            
-        </div>
-        <div class="controllbtn">
-            <button class="controllbtn__btn">
-                Contact with me
-            </button class="controllbtn__btn">
-            <button class="controllbtn__btn">
-                Rss feeder
-            </button>
-            <button class="controllbtn__btn">
-                Donate
-            </button>
-        </div>
-        <!-- TODO: MUST BE DYNAMIC -->
-        <div class="announcements">
-            <ul class="posts">
-            </ul>
-        </div>  
-       
+            <nav class="nav" data-nav>
+                <p class="eyebrow">Navigate</p>
+                <ul class="menu sidebar__menu" id="menu"></ul>
+            </nav>
+
+            <div class="sidebar__profile">
+                <div class="sidebar__avatar-wrap">
+                    <img src="./assets/images/me-web.jpg" alt="Ali Irvani" class="sidebar__avatar">
+                    <span class="status-dot" title="Profile status"></span>
+                </div>
+                <div>
+                    <strong>AI Engineer · Backend/Data</strong>
+                    <span>Mashhad, Iran · Computer Engineering</span>
+                </div>
+            </div>
+
+            <div class="sidebar__footer">
+                <div class="mini-links" aria-label="Social links">
+                    <a href="mailto:irvaniali79@gmail.com" aria-label="Email Ali">@</a>
+                    <a href="https://github.com/irvaniali79" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
+                    <a href="https://www.linkedin.com/in/ali-irvani-02b3151bb/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+                </div>
+                <button class="text-button" type="button" data-print>Print / PDF ↗</button>
+            </div>
+        </aside>
+
+        <main class="main" id="main">
+            <section class="hero section-anchor" id="home" aria-labelledby="hero-title">
+                <figure class="hero__backdrop">
+                    <img src="./assets/images/background-web.jpg" alt="Ali's workspace with piano, monitor and laptop" loading="eager">
+                </figure>
+                <div class="hero__grid"></div>
+                <div class="hero__content">
+                    <div class="hero__eyebrow"><span class="pulse"></span> AI-first · backend-minded · data-driven</div>
+                    <h1 id="hero-title">I build systems that can <em>retrieve, reason, and run.</em></h1>
+                    <p class="hero__lead">AI Engineer & Backend/Data Developer with 6+ years of experience designing scalable APIs, intelligent data workflows, RAG pipelines, LLM integrations, and high-performance financial systems.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="#experience">Explore the work <span>↓</span></a>
+                        <a class="button button--ghost" href="mailto:irvaniali79@gmail.com">Start a conversation <span>↗</span></a>
+                    </div>
+                    <div class="hero__signature" aria-label="Personal stack">
+                        <span>Python</span><i>·</i><span>TypeScript</span><i>·</i><span>RAG</span><i>·</i><span>PostgreSQL</span><i>·</i><span>Redis</span>
+                    </div>
+                </div>
+                <div class="hero__photo-card" aria-hidden="true">
+                    <img src="./assets/images/me-web.jpg" alt="">
+                    <div class="photo-card__meta"><span>01</span><span>signal / human</span></div>
+                </div>
+            </section>
+
+            <section class="section section-anchor" id="about" aria-labelledby="about-title">
+                <div class="section-heading">
+                    <span class="section-index">01</span>
+                    <div>
+                        <p class="eyebrow">About the engineer</p>
+                        <h2 id="about-title">A resume, but with the architecture left visible.</h2>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <p class="lede">My center of gravity is the boundary between <strong>AI behavior</strong> and <strong>production software.</strong> I like the parts where data quality, system design, retrieval, latency, and developer tooling all meet.</p>
+                        <p>I work across RAG pipelines, LLM integration, semantic search, agentic workflows, backend architecture, distributed systems, databases, and algorithmic trading tooling — with a strong preference for systems that are observable, testable, and explainable.</p>
+                        <div class="callout"><span>↳</span><strong>Specialisation</strong><span>AI engineering, backend architecture, distributed systems, databases, data pipelines, performance optimisation, algorithmic trading.</span></div>
+                    </div>
+                    <div class="signal-panel">
+                        <div class="signal-panel__title"><span>signal.map</span><span>live profile</span></div>
+                        <div class="signal-map">
+                            <div class="signal-map__ring ring-a"></div>
+                            <div class="signal-map__ring ring-b"></div>
+                            <div class="signal-map__ring ring-c"></div>
+                            <span class="signal-node node-a"></span>
+                            <span class="signal-node node-b"></span>
+                            <span class="signal-node node-c"></span>
+                            <span class="signal-node node-d"></span>
+                            <span class="signal-node node-e"></span>
+                            <div class="signal-map__label">AI ↔ DATA ↔ SYSTEMS</div>
+                        </div>
+                        <div class="signal-panel__facts">
+                            <span><strong>6+</strong><small>years</small></span>
+                            <span><strong>#1</strong><small>internal bootcamp</small></span>
+                            <span><strong>AI</strong><small>first mindset</small></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-anchor" id="experience" aria-labelledby="experience-title">
+                <div class="section-heading">
+                    <span class="section-index">02</span>
+                    <div>
+                        <p class="eyebrow">Where I have been building</p>
+                        <h2 id="experience-title">Experience</h2>
+                    </div>
+                </div>
+                <div class="timeline" id="experience-list"></div>
+            </section>
+
+            <section class="section section-anchor" id="capabilities" aria-labelledby="capabilities-title">
+                <div class="section-heading">
+                    <span class="section-index">03</span>
+                    <div>
+                        <p class="eyebrow">Tools, patterns, instincts</p>
+                        <h2 id="capabilities-title">Capabilities</h2>
+                    </div>
+                </div>
+                <div class="capability-grid" id="capabilities-list"></div>
+            </section>
+
+            <section class="section section-anchor" id="personal" aria-labelledby="personal-title">
+                <div class="section-heading">
+                    <span class="section-index">04</span>
+                    <div>
+                        <p class="eyebrow">Beyond the editor</p>
+                        <h2 id="personal-title">The personal layer</h2>
+                    </div>
+                </div>
+                <div class="personal-grid" id="personal-list"></div>
+            </section>
+
+            <section class="section section-anchor" id="projects" aria-labelledby="projects-title">
+                <div class="section-heading">
+                    <span class="section-index">05</span>
+                    <div>
+                        <p class="eyebrow">Built outside the job description</p>
+                        <h2 id="projects-title">Selected projects</h2>
+                    </div>
+                </div>
+                <div class="project-grid" id="projects-list"></div>
+            </section>
+
+            <section class="section section-anchor" id="notes" aria-labelledby="notes-title">
+                <div class="section-heading section-heading--split">
+                    <div class="section-heading__identity">
+                        <span class="section-index">06</span>
+                        <div>
+                            <p class="eyebrow">The old project survives here</p>
+                            <h2 id="notes-title">Notes / lab log</h2>
+                        </div>
+                    </div>
+                    <div class="filter-row" role="tablist" aria-label="Filter notes">
+                        <button class="filter-button is-active" type="button" data-filter="all">All</button>
+                        <button class="filter-button" type="button" data-filter="ai">AI</button>
+                        <button class="filter-button" type="button" data-filter="systems">Systems</button>
+                        <button class="filter-button" type="button" data-filter="markets">Markets</button>
+                    </div>
+                </div>
+                <ul class="posts" id="posts"></ul>
+            </section>
+
+            <section class="section section-anchor" id="contact" aria-labelledby="contact-title">
+                <div class="contact-card">
+                    <div>
+                        <p class="eyebrow">07 · contact</p>
+                        <h2 id="contact-title">Have a hard system problem?</h2>
+                        <p>Send the context. I’m most interested in work where AI, backend architecture and data engineering are not separate lanes.</p>
+                    </div>
+                    <div class="contact-card__actions">
+                        <a class="button button--primary" href="mailto:irvaniali79@gmail.com">irvaniali79@gmail.com ↗</a>
+                        <a class="button button--ghost" href="tel:+989154830087">+98 915 483 0087 ↗</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <span>Built from the original irvaniali79 project — vanilla HTML, CSS, ES modules.</span>
+                <span>Updated 2026 · <a href="#top">back to top ↑</a></span>
+            </footer>
+        </main>
     </div>
 
-  
-
+    <script type="module" src="./assets/scripts/app.js"></script>
 </body>
-
 </html>

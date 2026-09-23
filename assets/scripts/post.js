@@ -1,21 +1,21 @@
-import data from "../db/store.js";
+import { posts } from '../db/store.js';
 
+function mountPostList(targetId = 'posts', filter = 'all') {
+    const element = document.getElementById(targetId);
+    if (!element) return;
 
-function mountPostList(className,listItems){
-    const elem = document.getElementsByClassName(className)[0];
-    let postsHtml = '';
-    for (const item of data['posts']) {
-        postsHtml += '<li class="post">'+item.content+'</li>\n';
-    }
-    elem.innerHTML = postsHtml;
+    const visible = filter === 'all' ? posts : posts.filter((post) => post.category === filter);
+    element.innerHTML = visible.map((post) => `
+        <li class="post" data-category="${post.category}">
+            <div class="post__meta">
+                <span>${post.label}</span>
+                <span>${post.date}</span>
+            </div>
+            <h3>${post.title}</h3>
+            <p>${post.content}</p>
+            <span class="post__arrow">↗</span>
+        </li>
+    `).join('');
 }
 
-
-
-
-
-
-
-
-
-export {mountPostList};
+export { mountPostList };
